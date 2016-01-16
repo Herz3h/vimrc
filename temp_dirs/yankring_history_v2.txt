@@ -1,0 +1,30 @@
+,V
+desert ,v
+set background=dark,V
+mustang,v
+if has("terminfo")    let &t_Co=16    let &t_AB="\<Esc>[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm"    let &t_AF="\<Esc>[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm"else    let &t_Co=16    let &t_Sf="\<Esc>[3%dm"    let &t_Sb="\<Esc>[4%dm"endif,V
+set t_Co=256,V
+set t_Co=256,V
+localhost,v
+https://crm.jplsystemes.net/outlook_calendars/loggedIn,v
+pki/tls/private/localhost.key,v
+pki/tls/certs/localhost.crt,v
+com,v
+.,v
+example,v
+www,v
+#,v
+443,v
+</IfModule>,V
+<IfModule mod_ssl.c>,V
+80,v
+.175.85.151,v
+88,v
+luna,v
+88.175.85.151,v
+    Require all granted,V
+set syntax on,V
+/,v
+root,v
+83.153.78.197,v
+-A INPUT -p tcp -s 83.153.78.197 -j ACCEPT,V
