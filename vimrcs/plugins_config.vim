@@ -172,3 +172,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pdv_template_dir = $HOME . "/.vim_runtime/sources_non_forked/vim-phpdocumentor/templates_snip"
 nnoremap <buffer> <leader>p :call pdv#DocumentWithSnip()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Unimpaired
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap < [
+nmap > ]
+omap < [
+omap > ]
+xmap < [
+xmap > ]

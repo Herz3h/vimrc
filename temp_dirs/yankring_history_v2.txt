@@ -1,100 +1,100 @@
-                        continue;,V
-id,v
-s,v
-    public $uses = array('CalendarRemindedDate', 'OperationType', 'CalendarGlobam', 'OperationType', 'CalendarGlobams');,V
-value,v
-variable,v
- ,v
-        $operationType = $this->OperationType->findBydd,V
-),v
-array(,v
-('item_packs_id' => '0'        ),v
-0,v
-'item_packs_id' => '0',v
-paginate,v
-array,v
-'all', ,v
-'all', array('item_packs_id' => '0'),v
-4,v
-http:,v
-allow-same-origin ,v
-devis_type,v
-devis_types,v
- devis,v
-Types,v
-sactive == ,v
-                        <li class="<?php echo $active == 3 && $sactive == 2 ? 'active' : '' ?>">                            <?php echo $this->Html->link(__('Types devis'), array(                                'controller' => 'devis_types',                                'action' => 'index'                            )); ?>                        </li>,V
-Articles,v
-(',v
-<?php $this->assign('page_title', __('Articles')); ?>,V
-<?php $this->start('sidebar'); ?>    <?php echo $this->element('layout/sidebar', array('active' => 3, 'sactive' => 1)) ?><?php $this->end() ?>,V
-primary,v
-add,v
-            'action' => 'add',V
-items,v
-Ajouter un article,v
-idnex,v
-<div class="col-xs-12">    <?php echo $this->Html->link('<i class="fa fa-plus-circle"></i> ' . __('Ajouter un article'), array(            'controller' => 'items',            'action' => 'add'        ), array(            'escape' => false,            'class' => 'btn btn-primary'    )); ?>        <br/><br/></div>,V
- class='col-md-3',v
-style='text-align: center;',v
-',v
-        echo "lol";,V
+getYear,v
+    public function beforeFilter()    {        ,V
+p,v
+<?php,V
+header.php,V
+<htmlj,V
+                        $.when(,V
+                        ).done(function(data, textStatus, xhr)                            {                            });,V
+.done(function(data, textStatus, xhr)                            {                            });,v
+, textStatus, xhr,v
 ,V
-        echo "</table>";,V
-        echo "<table class='table table-striped table-bordered'>";        echo "<tr>";        echo "<th>Nom</th> <th>Prix d'achat</th> <th>Prix publique</th> <th>SKU</th> <th>Prix au</th> <th>Actions</th>";,V
-        },V
-        {,V
-        if($count == 1),V
-,V
-aciwll,v
-                                return;,V
-                                $.ajax({                                    url: '/ItemPacks/getUpdatedItemPacks',                                    success: function(data, textStatus, xhr)                                    {                                        if(data.result)                                            $(".wrapper.wrapper-content").html(data.html);                                    }                                });,V
-                                        else,V
-                                        debugger;                                        console.log(data);,V
-;                                        console.log(data);,v
+                        var $button = $(this);,V
+e,v
+                                                            $('[data-content=list-products]').html(d.html);,V
+                                                success: function(data, textStatus, xhr)                                                {                                                },V
+ ,v
+0,v
+                        var $sku = $(this).attr('sku');,V
+                                                console.log(data);,V
+$,v
+false,v
+data, textStatus, xhr,v
+                            return;,V
+"use strict";,V
+PHP Documentor ,v
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" => PHP Documentor """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",V
 ,,v
-index,v
-        $this->set();,V
-'itemPacks', $this->ItemPack->find('all'),v
-        $this->ItemPack->recursive = 1;        $this->set('itemPacks', $this->ItemPack->find('all'));,V
-        $this->Paginator->settings = $this->paginate;,V
-getUpdateItemPacks,v
-                                debugger;,V
-.js*,v
-      ,V
-jquery-2.1.1.js*,v
-      jquery-2.1.1.js*,V
-crm.item.packs,v
-echo $this->Html->script('crm.item.packs');,V
-                                ,V
-                        $.ajax({                            url: '/Items/delete',                            method: 'POST',                            data: {                                'id': $(this).attr('data-id')                            },                            success: function(data, textStatus, xhr)                            {                                if(!data.result)                                {                                    toastr.error(data.message);                                    return;                                }                                toastr.success(data.message);                            }                    });,V
-                                $.ajax({                                    url: '/ItemPacks/index',                                    success: function(data, textStatus, xhr)                                    {                                        console.log(data);                                    }                                });,V
-.ready,v
-                                $.ajax({                                    url: '/ItemPacks/index',                                    success: function(data, textStatus, xhr)                                    {                                        console.log(data);                                    }                                });,v
-;,v
-                                    ,,V
-data: {                                        'id': $(this).attr('data-id')                                    },v
-                                    method: 'POST',,V
-delete,v
-Items,v
-if(!data.result)                                $,v
-                        $.ajax({                            url: '/Items/delete',                            method: 'POST',                            data: {                                'id': $(this).attr('data-id')                            },                            success: function(data, textStatus, xhr)                            {                                if(!data.result),V
-d,v
-[data-trigger=delete-item-from-pack],v
+#wpgmza_map{},V
+    top:-25px;    right:40px;,V
+3,v
+	/* padding: 30px 0 0 0; */,V
+2,v
+8,v
+,V
+    color:#A54E50;,V
+initial,v
+	/* border-top: 4px solid #000; */	/* border-bottom: 1px solid #000; */,V
+5,v
+    position:relative;,V
+img,v
+88.175.85.151,v
+-A INPUT -p tcp -s 88.175.85.151  -j ACCEPT,V
+height:100%;width:100%;,V
+position:absolute;,V
+                      /* <img src="<?php header_image(); ?>" width="<?php echo esc_attr( $header_image_width ); ?>" height="<?php echo esc_attr( $header_image_height ); ?>" alt="" /> */,V
+ddif(function()),V
+A,v
+t,v
+        <div class="col-md-2">    <?php         echo $this->Form->button('Créer un pack', array(        'class' => 'btn btn-primary',        'id' => 'showAddPackField',        'type' => 'button'));    ?>    </div>,V
+						<img src="<?php header_image(); ?>" width="<?php echo esc_attr( $header_image_width ); ?>" height="<?php echo esc_attr( $header_image_height ); ?>" alt="" />,V
+fff,v
+    font-family:Arial,Helvetica,sans-serif;,V
+x,v
+12px 0 0 0,v
+        border: 1px solid #DFE0E1;,V
+text-decoration:,v
+	padding: 0 10px;,V
+	line-height: 38px;,V
+    height:50px;    line-height:40px;    padding-top:5px;    color:#000;,V
+    padding:0px 20px 0px 20px;,V
+    height:53px;,V
+	background: #333;,V
+000,v
+left,v
+    $('#').,V
+    <?php ,V
+    </div>,V
+        <div class="col-md-4">,V
+        'class' => 'hidden',V
+remove,v
+                        $('#renameItemPack').removeClass('hidden');,V
+renameItemPack,v
+),v
+showAddPackField,v
+Créer un pack,v
+        echo $this->Form->button('Créer un pack', array(        'class' => 'btn btn-primary',        'id' => 'showAddPackField',        'type' => 'button'));,V
+Ajouter,v
                                     ,V
-                                if(!data.result),V
-delete-item-from-pack,v
-detail-,v
-detail,v
-detail-delete-item-from-pack,v
-</tr>u,v
-default,v
-</tr>,v
-table-striped table-bordered,v
-<leader>,v
-  autocmd FileType php let b:surround_45 = "<?php \r ?>",V
-echo "lol";,V
-. "<td>" .,v
- "<td>" .,v
-/td,v
-<td>,v
+success,v
+                                    toastr.success(data.message);,V
+                                e,V
+                                return (value);,V
+                        }                                    return (value);,V
+                            async: false,,V
+h,v
+w,v
+j,v
+k,v
+'/ItemPacks/editName',                                 {                                    item_pack_id: $(this).attr('data-item-pack-id'),                                    name: value                                },                                function (data,textStatus, xhr)                                {                                    return (value);                                });,v
+post,v
+function(value, settings),v
+'/ItemPacks/editName',v
+                                    return (value);,V
+                                    $.ajax({                                        url: '/ItemPacks/getUpdatedItemPacks',                                        success: function(data, textStatus, xhr)                                        {                                            if(data.result)                                                $(".wrapper.wrapper-content").html(data.html);                                        }                                    });,V
+                      $.ajax({,v
+.editable(function(value, settings)                    {                        $.post('/ItemPacks/editName',                                 {                                    item_pack_id: $(this).attr('data-item-pack-id'),                                    name: value                                },                                function (data,textStatus, xhr)                                {                                    $.ajax({                                        url: '/ItemPacks/getUpdatedItemPacks',                                        success: function(data, textStatus, xhr)                                        {                                            if(data.result)                                                $(".wrapper.wrapper-content").html(data.html);                                        }                                    });                                });                    },                    {                        indicator: 'En cours...',                        height:'90%',                        width:'20%',                        submit: 'Ok',                        onblur: 'cancel'                    });,v
+.editable(function(value, settings)                    {                        $.post('/ItemPacks/editName',                                 {                                    item_pack_id: $(this).attr('data-item-pack-id'),                                    name: value                                },                                function (data,textStatus, xhr)                                {                                    $.ajax({                                        url: '/ItemPacks/getUpdatedItemPacks',                                        success: function(data, textStatus, xhr)                                        {                                            if(data.result)                                                $(".wrapper.wrapper-content").html(data.html);                                        }                                    });                                });                    },                    {                        indicator: 'En cours...',                        height:'90%',                        width:'20%',                        submit: 'Ok',                        onblur: 'cancel'                    }),v
+            debugger;,V
+                    });,V
+                                });,V
