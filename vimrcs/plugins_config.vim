@@ -50,6 +50,12 @@ map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+" Speeds up search + adds a cache
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 
 
 """"""""""""""""""""""""""""""
@@ -129,9 +135,15 @@ let g:syntastic_python_checkers=['pyflakes']
 " Javascript
 let g:syntastic_javascript_checkers = ['jshint']
 
-" Go
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+" Default settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Custom CoffeeScript SyntasticCheck
 func! SyntasticCheckCoffeescript()
@@ -166,57 +178,87 @@ endif
 " let g:UltiSnipsJumpForwardTrigger="<c-j>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    if pumvisible()
-      return "\<C-n>"
-    else
-      call UltiSnips#JumpForwards()
-      if g:ulti_jump_forwards_res == 0
-        return "\<TAB>"
-      endif
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+                return "\<TAB>"
+            endif
+        endif
     endif
-  endif
-  return ""
+    return ""
 endfunction
 
 function! g:UltiSnips_Reverse()
-  call UltiSnips#JumpBackwards()
-  if g:ulti_jump_backwards_res == 0
-    return "\<C-P>"
-  endif
+    call UltiSnips#JumpBackwards()
+    if g:ulti_jump_backwards_res == 0
+        return "\<C-P>"
+    endif
 
-  return ""
+    return ""
 endfunction
 
 
 if !exists("g:UltiSnipsJumpForwardTrigger")
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+    let g:UltiSnipsJumpForwardTrigger = "<tab>"
 endif
 
 if !exists("g:UltiSnipsJumpBackwardTrigger")
-  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 endif
 
 au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger     . " <C-R>=g:UltiSnips_Complete()<cr>"
 au InsertEnter * exec "inoremap <silent> " .     g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => PHP Documentor 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:pdv_template_dir = $HOME . "/.vim_runtime/sources_non_forked/vim-phpdocumentor/templates_snip"
-" nnoremap <buffer> <leader>p :call pdv#DocumentWithSnip()<CR>
+let g:pdv_template_dir = $HOME . "/.vim_runtime/sources_non_forked/vim-phpdocumentor/templates_snip"
+nnoremap <buffer> <leader>pd :call pdv#DocumentWithSnip()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Unimpaired
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap < [
-nmap > ]
-omap < [
-omap > ]
-xmap < [
-xmap > ]
+" nmap < [
+" nmap > ]
+" omap < [
+" omap > ]
+" xmap < [
+" xmap > ]
 
 let g:html_indent_inctags = "html,body,head,tbody"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easytag
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:easytags_async=1
+let g:easytags_dynamic_files=2
+let g:easytags_syntax_keyword = 'always'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => TitleCase
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:titlecase_map_keys = 0
+nmap <leader>gt <Plug>Titlecase
+vmap <leader>gt <Plug>Titlecase
+nmap <leader>gT <Plug>TitlecaseLine
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => EasyAlign
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+"
+" " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => PhpSyntax
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let php_sql_query = 1
+let php_htmlInStrings = 1
+let php_folding = 1
