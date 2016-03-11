@@ -1,0 +1,54 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+<	/root/.vim_runtime/vimrcs/plugins_config.vim	/^nmap < [$/;"	m	language:Vim
+<	/root/.vim_runtime/vimrcs/plugins_config.vim	/^omap < [$/;"	m	language:Vim
+<c-b>	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <c-b> :CtrlPBuffer<cr>$/;"	m	language:Vim
+<leader>d	/root/.vim_runtime/vimrcs/plugins_config.vim	/^nnoremap <silent> <leader>d :GitGutterToggle<cr>$/;"	m	language:Vim
+<leader>f	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <leader>f :MRU<CR>$/;"	m	language:Vim
+<leader>j	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <leader>j :CtrlP<cr>$/;"	m	language:Vim
+<leader>l	/root/.vim_runtime/vimrcs/plugins_config.vim	/^nnoremap <silent> <leader>l :call SyntasticCheckCoffeescript()<cr>$/;"	m	language:Vim
+<leader>nb	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <leader>nb :NERDTreeFromBookmark $/;"	m	language:Vim
+<leader>nf	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <leader>nf :NERDTreeFind<cr>$/;"	m	language:Vim
+<leader>nn	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <leader>nn :NERDTreeToggle<cr>$/;"	m	language:Vim
+<leader>o	/root/.vim_runtime/vimrcs/plugins_config.vim	/^map <leader>o :BufExplorer<cr>$/;"	m	language:Vim
+<leader>z	/root/.vim_runtime/vimrcs/plugins_config.vim	/^nnoremap <silent> <leader>z :Goyo<cr>$/;"	m	language:Vim
+>	/root/.vim_runtime/vimrcs/plugins_config.vim	/^nmap > ]$/;"	m	language:Vim
+>	/root/.vim_runtime/vimrcs/plugins_config.vim	/^omap > ]$/;"	m	language:Vim
+g:airline_theme	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:airline_theme="powerlineish"$/;"	v	language:Vim
+g:bufExplorerDefaultHelp	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:bufExplorerDefaultHelp=0$/;"	v	language:Vim
+g:bufExplorerFindActive	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:bufExplorerFindActive=1$/;"	v	language:Vim
+g:bufExplorerShowRelativePath	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:bufExplorerShowRelativePath=1$/;"	v	language:Vim
+g:bufExplorerSortBy	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:bufExplorerSortBy='name'$/;"	v	language:Vim
+g:ctrlp_cache_dir	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:ctrlp_cache_dir = $HOME . '\/.cache\/ctrlp'$/;"	v	language:Vim
+g:ctrlp_custom_ignore	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:ctrlp_custom_ignore = 'node_modules\\|^\\.DS_Store\\|^\\.git\\|^\\.coffee'$/;"	v	language:Vim
+g:ctrlp_map	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:ctrlp_map = '<c-f>'$/;"	v	language:Vim
+g:ctrlp_max_height	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:ctrlp_max_height = 20$/;"	v	language:Vim
+g:ctrlp_user_command	/root/.vim_runtime/vimrcs/plugins_config.vim	/^  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'$/;"	v	language:Vim
+g:ctrlp_working_path_mode	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:ctrlp_working_path_mode = 0$/;"	v	language:Vim
+g:easytags_async	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:easytags_async=1$/;"	v	language:Vim
+g:easytags_dynamic_files	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:easytags_dynamic_files=2$/;"	v	language:Vim
+g:easytags_syntax_keyword	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:easytags_syntax_keyword = 'always'$/;"	v	language:Vim
+g:gitgutter_enabled	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:gitgutter_enabled=0$/;"	v	language:Vim
+g:goyo_margin_bottom	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:goyo_margin_bottom = 2$/;"	v	language:Vim
+g:goyo_margin_top	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:goyo_margin_top = 2$/;"	v	language:Vim
+g:goyo_width	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:goyo_width=100$/;"	v	language:Vim
+g:go_fmt_command	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:go_fmt_command = "goimports"$/;"	v	language:Vim
+g:html_indent_inctags	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:html_indent_inctags = "html,body,head,tbody"$/;"	v	language:Vim
+g:multi_cursor_next_key	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:multi_cursor_next_key="\\<C-s>"$/;"	v	language:Vim
+g:NERDTreeWinPos	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:NERDTreeWinPos = "left"$/;"	v	language:Vim
+g:NERDTreeWinSize	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:NERDTreeWinSize=35$/;"	v	language:Vim
+g:syntastic_auto_loc_list	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v	language:Vim
+g:syntastic_go_checkers	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']$/;"	v	language:Vim
+g:syntastic_javascript_checkers	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:syntastic_javascript_checkers = ['jshint']$/;"	v	language:Vim
+g:syntastic_python_checkers	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:syntastic_python_checkers=['pyflakes']$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/root/.vim_runtime/vimrcs/plugins_config.vim	/^  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/root/.vim_runtime/vimrcs/plugins_config.vim	/^  let g:UltiSnipsJumpForwardTrigger = "<tab>"$/;"	v	language:Vim
+g:user_zen_mode	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let g:user_zen_mode='a'$/;"	v	language:Vim
+g:yankring_history_dir	/root/.vim_runtime/vimrcs/plugins_config.vim	/^    let g:yankring_history_dir = '~\/.vim_runtime\/temp_dirs\/'$/;"	v	language:Vim
+Grep_Skip_Dirs	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'$/;"	v	language:Vim
+MRU_Max_Entries	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let MRU_Max_Entries = 400$/;"	v	language:Vim
+NERDTreeIgnore	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let NERDTreeIgnore = ['\\.pyc$', '__pycache__']$/;"	v	language:Vim
+NERDTreeShowHidden	/root/.vim_runtime/vimrcs/plugins_config.vim	/^let NERDTreeShowHidden=0$/;"	v	language:Vim
+Si	/root/.vim_runtime/vimrcs/plugins_config.vim	/^vmap Si S(i_<esc>f)$/;"	m	language:Vim
+SyntasticCheckCoffeescript	/root/.vim_runtime/vimrcs/plugins_config.vim	/^func! SyntasticCheckCoffeescript()$/;"	f	language:Vim
+UltiSnips_Complete	/root/.vim_runtime/vimrcs/plugins_config.vim	/^function! g:UltiSnips_Complete()$/;"	f	language:Vim
+UltiSnips_Reverse	/root/.vim_runtime/vimrcs/plugins_config.vim	/^function! g:UltiSnips_Reverse()$/;"	f	language:Vim

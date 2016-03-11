@@ -1,4 +1,4 @@
-colorscheme hybrid
+colorscheme molokai
 set number
 set relativenumber
 imap jj <Esc>

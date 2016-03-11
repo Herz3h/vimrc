@@ -1,100 +1,100 @@
-,V
-Proposition,v
-        'value' => $edit            ? $this->Global->convertMysqlForFrench($customer['CustomerSuivis']['date'])            : date('d/m/Y'),V
-        'value' => $edit,V
- ,v
-$customer['CustomerSuivis']['date'] ,v
-        'data-id' => $edit ? $customer['CustomerSuivis']['date'] : null,,V
-date_note,v
-$this->request->data['Proposition']['id'] : '',,v
-    <?php $this->Global->startFormSize($this->Form, 3); ?>    <?php echo $this->Form->input('date', array(        'type' => 'text',        'label' => __('Date'),        'class' => 'datepicker input-mask-date',        'data-id' => $edit ? $this->request->data['Proposition']['id'] : '',        'data-model' => 'Proposition',        'value' => $edit            ? $this->Global->convertMysqlForFrench($this->request->data['Proposition']['date'])            : date('d/m/Y')    )); ?>            <?php $this->Global->endFormSize($this->Form); ?>,V
-Customer,v
-customer_id,v
-    <?php echo $this->Form->hidden('customer_id', array(        'value' => $customer['Customer']['id']    )); ?>    ,V
-     */,V
-<?php    if (!isset($edit)) {        $edit = false;    }        if (!isset($withButton)) {        $withButton = true;    }?><?php if ($withButton): ?><?php echo $this->Form->create('Proposition'); ?><?php endif; ?>    <?php if ($edit): ?>        <?php echo $this->Form->input('id'); ?>    <?php endif; ?>    <?php echo $this->Form->hidden('customer_id', array(        'value' => $customer['Customer']['id']    )); ?>        <?php echo $this->Form->input('name', array(        'label' => __('Libellé')    )); ?>    <?php $this->Global->startFormSize($this->Form, 3); ?>    <?php echo $this->Form->input('date', array(        'type' => 'text',        'label' => __('Date'),        'class' => 'datepicker input-mask-date',        'data-id' => $edit ? $this->request->data['Proposition']['id'] : '',        'data-model' => 'Proposition',        'value' => $edit            ? $this->Global->convertMysqlForFrench($this->request->data['Proposition']['date'])            : date('d/m/Y')    )); ?>            <?php $this->Global->endFormSize($this->Form); ?>            <?php $this->Global->startFormSize($this->Form, 7); ?>    <?php echo $this->Form->input('type', array(        'label' => __('Type'),        'empty' => __('-- Choisissez --'),        'options' => array('SP' => __('Sur place'), 'T' => __('Téléphone'))    )); ?>    <?php $this->Global->endFormSize($this->Form); ?>       <?php $this->Global->startFormSize($this->Form, 8); ?>    <?php echo $this->Form->input('devis_type_id', array(        'label' => false,        'empty' => __('-- Choisissez --')    )); ?>    <?php $this->Global->endFormSize($this->Form); ?>    <?php if ($withButton): ?>        <?php echo $this->Form->button(__('Envoyer')); ?>    <?php endif; ?><?php if ($withButton): ?><?php echo $this->Form->end(); ?><?php endif; ?>,V
-Propositions,v
-propositions,v
-<?php    if (!isset($edit)) {        $edit = false;    }?><div class="modal-header">    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>    <h4 class="modal-title">        <?php echo $edit ? __('Mise à jour Proposition') : __('Ajout Proposition') ?>    </h4></div><?php echo $this->Form->create('Proposition', array(    'id' => 'Proposition' . ($edit ? 'Edit' : 'Add') . 'Form',    'url' => array(        'controller' => 'propositions',        'action' => $edit ? 'edit' : 'add'    ),    'class' => 'form-horizontal proposition-form')); ?><div class="modal-body">    <?php echo $this->element('Propositions/forms/edit', array('edit' => $edit, 'withButton' => false)); ?></div><div class="modal-footer">    <?php echo $this->Form->button($edit ? __('Mettre à jour') : __('Ajouter'), array(        'class' => 'btn btn-primary'    )) ?>    <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Annuler'); ?></button></div><?php echo $this->Form->end(); ?><?php echo $this->Html->script('jpl.propositions.edit'); ?>,V
-        $view->set('devisTypes', $this->Proposition->DevisType->find('list'));,V
-        if(!$this->request->is('post')            || empty($this->request->data)            || !$this->request->data['customerId'])        {            return $this->erreur(__('Données en entrée invalides'));        },V
-        if (!($customer = $this->_checkCustomerId())) {            return $this->erreur(array(                'message' => __('Client Inconnu')            ));        }                // Contrôle des entrées        $params = array(            'mode' => array(                'mandatory' => true,                'enum' => array('add', 'edit')            )        );                if (isset($this->request->data['mode'])         && $this->request->data['mode'] == 'edit') {            $params['propositionId'] = array(                'mandatory' => true,                'id' => 'Proposition'            );        }                if (!$this->checkParams($params)) {            return $this->erreur(array(                'message' => __('Vérifiez les données saisies')            ));        }                // Envoi du code HTML        $view = new View($this, false);        $view->layout = 'ajax';        $view->set('customer', $customer);        $view->set('edit', $this->request->data['mode'] == 'edit');        $view->set('devisTypes', $this->Proposition->DevisType->find('list'));                if ($this->request->data['mode'] == 'edit') {            foreach ($customer['Crm']['Proposition'] as $p) {                if ($p['id'] == $this->request->data['propositionId']) {                    $this->request->data['Proposition'] = $p;                }            }        }                return $this->ok(array(            'customerId' => $this->request->data['customerId'],            'year' => $this->crmYear,            'mode' => $this->request->data['mode'],            'propositionId' => isset($this->request->data['propositionId'])                ? $this->request->data['propositionId']                : null,            'html' => $view->render('/Elements/Crm/modals/Propositions/edit')        ));,V
-(,v
-e,v
-u,v
-AppController,v
-s,v
-x,v
-a,v
-propositionaxs,v
+/text/i,v
+match,v
+search,v
+-group,v
+inline,v
+style={this.props.show === true ? {display: 'inline'} : {display: 'none'}},v
+none,v
+display,v
+-block,v
+block,v
+file,v
+style={file.show === true ? {display: 'block'} : {display: 'none'}},v
+            console.log(files[i].filename);,V
         ,V
-        jpl.crm.Triggers.updateModal($(this), {'customerId': $(this).closest('td').attr('data-customer'), 'mode': 'add'});,V
-jjjjj,v
-    // Ajout/Edition proposition    $('body').on('click', '[data-trigger=add-proposition]', function() {                jpl.crm.Triggers.updateModal($(this), {'customerId': $(this).closest('td').attr('data-customer'), 'mode': 'add'});    });    ,V
-    <?php echo $this->element('Crm/overlays/Propositions/add', array('customer' => $customer)); ?>,V
-    ,V
-    <?php if ($nb = $customer['Infos']['Proposition']['nbArchived']): ?>    <?php echo $this->Html->link('<i class="fa fa-server"></i>', '#main-modal', array(        'escape' => false,        'class' => 'btn btn-default',        'data-toggle' => 'modal',        'data-trigger' => 'archived-propositions',        'data-url' => '/propositionaxs/modalArchived',        'title' => __('Propositions archivées')    )); ?>    <?php endif; ?>,V
-proposition,v
-<div class="<?php echo $this->Global->getOverlayClass(); ?>">        <?php echo $this->Html->link('<i class="fa fa-plus-circle"></i>', '#main-modal', array(        'escape' => false,        'class' => 'btn btn-default',        'data-toggle' => 'modal',        'data-trigger' => 'add-proposition',        'data-url' => '/propositionaxs/modalEdit'    )); ?>        <?php if ($nb = $customer['Infos']['Proposition']['nbArchived']): ?>    <?php echo $this->Html->link('<i class="fa fa-server"></i>', '#main-modal', array(        'escape' => false,        'class' => 'btn btn-default',        'data-toggle' => 'modal',        'data-trigger' => 'archived-propositions',        'data-url' => '/propositionaxs/modalArchived',        'title' => __('Propositions archivées')    )); ?>    <?php endif; ?>    </div>,V
- class="<?php echo $this->Global->getOverlayClass(); ?>">        <?php echo $this->Html->link('<i class="fa fa-plus-circle"></i>', '#main-modal', array(        'escape' => false,        'class' => 'btn btn-default',        'data-toggle' => 'modal',        'data-trigger' => 'add-proposition',        'data-url' => '/propositionaxs/modalEdit'    )); ?>        <?php if ($nb = $customer['Infos']['Proposition']['nbArchived']): ?>    <?php echo $this->Html->link('<i class="fa fa-server"></i>', '#main-modal', array(        'escape' => false,        'class' => 'btn btn-default',        'data-toggle' => 'modal',        'data-trigger' => 'archived-propositions',        'data-url' => '/propositionaxs/modalArchived',        'title' => __('Propositions archivées')    )); ?>    <?php endif; ?>    </,v
-, textStatus, jqxhr,v
-                           // console.log(data);,V
-                           });,V
-                               error: function(xhr, textStatus, errorThrown),V
-                               },,V
-                               {                                   // console.log(xhr);                                   // console.log(textStatus);                                   // console.log(errorThrown);                               },V
-, textStatus, xhr,v
-    "use strict";,V
-  let php_folding = 1,V
-beforeFilter,v
-EasyAlign,v
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" => EasyAlign""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",V
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" => TitleCase,V
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" => EasyAlign"",v
-  let php_sql_query = 1,V
-  let php_htmlInStrings = 1,V
-getCrmClientType,v
-    protected function getCrmClientType()    {,V
-,v
-    {,V
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" => Unimpaired"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""call camelcasemotion#CreateMotionMappings('<leader>'),V
-    /* protected getSplitAttachment($type, $id) {{{ */ ,V
-    /* public beforeFilter() {{{ */     /**,V
-     * beforeFilter,V
-;,v
-true,v
-Commande,v
-Orders,v
-order,v
- . ' - Commande n°' . $order['Orders']['id'];,v
-devis,v
-Devis,v
- . ' n°' . $devis['Devis']['id'];,v
-+,v
-priority = 1,V
-center-block,v
--,v
-            $Forecast->create();            $Forecast->save(array(                'year' => date('Y'),                'planned' => 0,                'done' => $total,                'customers_id' => $customerId            ));,V
-            $total += floatval($forecast['Forecast']['done']);,V
-revertU,v
-    public function updateForecasts($paymentId)    {        App::uses('Order', 'Model');        App::uses('Forecast', 'Model');        App::uses('Encaissement', 'Model');        App::uses('Decaissement', 'Model');        $Order = new Order();        $Forecast = new Forecast();        $Encaissement = new Encaissement();        $Decaissement = new Decaissement();        $payment = $this->findById($paymentId);        $orderId = $payment['Payment']['orders_id'];        $customerId = $payment['Payment']['customer_id'];        $encaissement = $Encaissement->findByOrderId($orderId);        $decaissement = $Decaissement->findByOrderId($orderId);        $total = floatval($encaissement['Encaissement']['total']) - floatval($decaissement['Decaissement']['total']);        /* Debugger::log(array( */        /*     'not yet', */        /*     $encaissement['Encaissement']['total'], */        /*     floatval($encaissement['Encaissement']['total']), */        /*     $decaissement['Decaissement']['total'], */        /*     floatval($decaissement['Decaissement']['total']), */        /* )); */        $forecast = $Forecast->findByYear(date('Y'));        if(count($forecast))        {            $Forecast->id = $forecast['Forecast']['id'];            $total += floatval($forecast['Forecast']['done']);            $Forecast->saveField('done', $total);        }        else        {            $Forecast->create();            $Forecast->save(array(                'year' => date('Y'),                'planned' => 0,                'done' => $total,                'customers_id' => $customerId            ));        }            },V
-            Debugger::log($total);,V
-            ));,V
-        Debugger::log(array(            'trying',             count($encaissement),            count($decaissement)        ));,V
-        Debugger::log($orderId);,V
-    public function test()    {        $this->Payment->id = 5;        $this->Payment->updateForecasts(5);    },V
-21,v
-orders_id,v
-$payement,v
-$payment['Payment']['orders_id'];,v
-        $order = $Order->findById($payment['Payment']['']),V
-origin_id,v
-finciwdById,v
+        debugger;,V
+$.extend({}, this.state.files); ,v
+,V
+ ,v
+                ,V
+false,v
+                files[i].show = false;,V
+            },V
+this.state.file[i].search(text),v
+w,v
+,,v
+j,v
+this.state.files.length,v
+null,v
+state,v
+                this.s,V
+),v
+filename,v
+                    ''                );,V
+$file,v
+mandatAndCsvFiles,v
+Filter,v
+handleSearchChange,v
+files,v
+body-files,v
+files={files},v
+MandatAndCsvFiles,v
+var mandatAndCsvFiles = ReactDOM.render(<MandatAndCsvFiles files={files} />, document.getElementById('body-files'));,V
+            div.col-md-oo,V
+            onClick={this.handleAddDebitCategory}            ,v
+    <a href="/sepa/index"><button class="btn btn-success">Aller à l'index</button></a>,V
+search-files,v
+body,v
+<div class="row" id="body-files" style="margin-top:20px"></div>,V
+onClick={this.handleAddDebitCategory},v
+Ajouter une catégorie de prélevement,v
+info,v
+            </div>,V
+            <div>,V
+            <div className="col-md-2">                <button className="btn btn-info" onClick={this.handleAddDebitCategory}>Ajouter une catégorie de prélevement</button>            </div>,V
+                <button className="btn btn-info" onClick={this.handleAddDebitCategory}>Ajouter une catégorie de prélevement</button>,V
+x,v
+e,v
 d,v
-I,v
-        $Order = new Order();,V
-        App::uses('Encaissement', 'Model');        App::uses('Decaissement', 'Model');,V
-        $Order = new Order();        App::uses('Forecast', 'Model');,V
-        App::uses('Order', 'Model');        $Order = new Order();,V
-$orderId, $customerId,v
-                $Order->findById(),V
+n,v
+i,v
+/,v
+style="margin-top:20px",v
+    ddd,V
+<div class="row" id="body-files">    ddd</div>,V
+                debugger;,V
+mandats/,v
+getDownloadUrl,v
+    /*     *     */,V
+\Phalcon\Mvc\Controller,v
+        $this->assets->addJs('http://code.jquery.com/jquery-2.2.1.min.js');        $this->assets->addJs('js/bootstrap.min.js');        $this->assets->addJs('js/node_modules/react/dist/react-with-addons.js');        $this->assets->addJs('js/node_modules/react-dom/dist/react-dom.js');        $this->assets->addJs('https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js');        $this->assets->addJs('js/plugins/toastr/build/toastr.min.js');        $this->assets->addJs('js/plugins/Sidebar/js/jquery.sidebar.min.js');        $this->assets->addJs('js/plugins/jQueryUi/js/jquery-ui.min.js');        $this->assets->addJs('js/plugins/Datepicker/js/bootstrap-datepicker.min.js');        $this->assets->addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');        $this->assets->addCss('js/plugins/FontAwesome/css/font-awesome.min.css');        $this->assets->addCss('js/plugins/Datepicker/css/bootstrap-datepicker.min.css');        $this->assets->addCss('js/plugins/toastr/build/toastr.min.css');        $this->assets->addCss('css/bootstrap.min.css');        $this->assets->addCss('css/global.css');,V
+, array('files' => $filesFiltered));,v
+    handleDownloadFile: function()    {        $.ajax({            url: 'Mandats/getDownloadUrl',            method: 'post',            data: {filename: files[this.state.index]},            success: function(data)            {                document.location.href = data.link;            }        });    },,V
+        // console.log(this.state.index);        // console.log(files[this.state.index]);,V
+;,v
+$mandatFileName,v
+,V
+'Données en entrées invalides',v
+"http://195.154.33.29/sepa/" . $mandatFileName,v
+message,v
+error,v
+            return $this->error(array(                'message' => 'Données en entrées invalides'            ));,V
+id,v
+        $request = $this->request;        if(!$request->isPost()            || !$request->isAjax()            || !$request->getPost('id'))        {            return $this->error(array(                'message' => 'Données en entrées invalides'            ));        },V
+ControllerBase,v
+                window.,V
+                    document.location.href=data.link;,V
+download,v
+data-file-index={this.props.index},v
+$(e.attr),v
+    handleDownloadFile: ,V
+            </tbody>,V
+Math.random(),v
+                <td>{this.props.filename}</td>                <td>                    <button className="btn btn-info" onClick={this.handleDownloadFile}>Télecharger</button>                </td>,V
+            <tr>                <td>{this.props.filename}</td>                <td>                    <button className="btn btn-info" onClick={this.handleDownloadFile}>Télecharger</button>                </td>            <tr>,V
+var FileRow = React.createClass({    render: function()    {        return (            <tr>                <td>{this.props.filename}</td>                <td>                    <button className="btn btn-info" onClick={this.handleDownloadFile}>Télecharger</button>                </td>            <tr>        );    }});,V
+    getInitialState: function()    {        return {files: null};    },,V
+    getInitialState: function(){,V
+(,v
+sfdsfsd,V
+        echo '<pre>', print_r($filesFiltered), '</pre>';,V
