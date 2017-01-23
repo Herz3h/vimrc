@@ -1,7 +1,7 @@
+imap jj <Esc>
 colorscheme molokai
 set number
 set relativenumber
-imap jj <Esc>
 set TERM=screen-256color
 set t_Co=256
 highlight Normal ctermbg=NONE
