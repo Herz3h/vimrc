@@ -1,3 +1,4 @@
+https://github.com/ctrlpvim/ctrlp.vim.git,v
 imap jj <Esc>,V
 e ~/buffer<cr>,v
 nmap <leader>w :w!<cr>,V
@@ -97,4 +98,3 @@ $(e.attr),v
 Math.random(),v
                 <td>{this.props.filename}</td>                <td>                    <button className="btn btn-info" onClick={this.handleDownloadFile}>Télecharger</button>                </td>,V
             <tr>                <td>{this.props.filename}</td>                <td>                    <button className="btn btn-info" onClick={this.handleDownloadFile}>Télecharger</button>                </td>            <tr>,V
-var FileRow = React.createClass({    render: function()    {        return (            <tr>                <td>{this.props.filename}</td>                <td>                    <button className="btn btn-info" onClick={this.handleDownloadFile}>Télecharger</button>                </td>            <tr>        );    }});,V
